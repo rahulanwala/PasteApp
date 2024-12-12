@@ -27,26 +27,26 @@ const Paste = () => {
       type='search' placeholder='Search paste here' value={searchTerm}
       onChange={(e)=>setSearchTerm(e.target.value)} /> 
 
-        <div className="w-full mt-10 bg-gray-100 rounded-md bg-opacity-20 border border-[rgba(128,121,121,0.3)] backdrop-blur-2xl">
+        <div className="w-full mt-10 pb-5 bg-gray-100 rounded-md bg-opacity-20 border border-[rgba(128,121,121,0.3)] backdrop-blur-2xl">
             
             <h3 className="px-4 text-4xl font-semibold border-b border-w border-[rgba(128,121,121,0.3)] pb-2">
                 All Pastes
             </h3>
             
-            <div className='flex flex-col gap-5 m-5 w-full'>
+            <div className='flex flex-col gap-5 mt-5 w-full'>
                 {
                     filteredData.length > 0 ?
                     filteredData.map(
                         (paste) => {
                             return (
-                                <><div className='border rounded-md w-[97%] p-2 justify-between flex flex-col sm:flex-row'>
+                                <><div className='border rounded-md w-[96%] ml-[2%] p-2 justify-between flex flex-col sm:flex-row'>
 
                                     <div className='flex flex-col items-start m-3 mt-1 gap-2'>
                                         <p className='font-semibold text-3xl'>{paste.title}</p>
                                         <p className='font-normal text-md line-clamp-3 max-w-[40%] text-[#707070]'>{paste.content}</p>
                                     </div>
 
-                                    <div className="flex flex-col gap-y-4 sm:items-end pt-3">
+                                    <div className="flex flex-col gap-y-5 sm:items-end pt-3">
                                         <div className='flex flex-row gap-4 place-content-evenly'>
                                             <button className='p-3'>
                                                 <Link to={`/?pasteId=${paste?._id}`}>

@@ -50,7 +50,6 @@ const Home = () => {
         setTitle("");
         setValue("");
         setSearchParams({});
-        // navigate("/");
     };
 
     return (
@@ -92,7 +91,7 @@ const Home = () => {
                                 navigator.clipboard.writeText(value);
                                 toast.success("Copied to Clipboard", {
                                     position: "top-right",
-                                });
+                                }); 
                             }}>
                             <Copy className="group-hover:text-sucess-500" size={18} />
                         </button>
